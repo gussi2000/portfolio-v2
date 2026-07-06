@@ -112,31 +112,35 @@
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
   <script>
+<script>
 const proyectos = [
-  ["Aspaut", "branding"],
-  ["Arcadius", "uxui"],
-  ["Pistolita'S", "branding"],
-  ["Orion Whisky", "branding"],
-  ["Gisella Podología", "branding"],
-  ["Ventas JCS", "branding"],
-  ["Alegre Gastronomía", "branding"],
-  ["Divino Tormento", "branding"],
-  ["Hermes Aerolínea", "branding"],
-  ["Pro Energy", "branding"],
-  ["Duoc Apaña", "uxui"],
-  ["Valck Producciones Digitales", "publicidad"],
-  ["Nomade Club", "branding"]
+  {nombre:"Aspaut", categoria:"branding", imagen:"imagen/aspaut.jpg"},
+  {nombre:"Arcadius", categoria:"uxui", imagen:"imagen/arcadius.jpg"},
+  {nombre:"Pistolita'S", categoria:"branding", imagen:"imagen/pistolitas.png"},
+  {nombre:"Orion Whisky", categoria:"branding", imagen:"imagen/orion_whisky_artesanal.jpg"},
+  {nombre:"Gisella Podología", categoria:"branding", imagen:"imagen/gisella_podología.jpg"},
+  {nombre:"Ventas JCS", categoria:"branding", imagen:"imagen/ventas_jcs.jpg"},
+  {nombre:"Alegre Gastronomía", categoria:"branding", imagen:"imagen/alegre_gastronomía.jpg"},
+  {nombre:"Divino Tormento", categoria:"branding", imagen:"imagen/divino_tormento.jpg"},
+  {nombre:"Hermes Aerolínea", categoria:"branding", imagen:"imagen/hermes_aerolínea.jpg"},
+  {nombre:"Pro Energy", categoria:"branding", imagen:"imagen/pro_energy.jpg"},
+  {nombre:"Duoc Apaña", categoria:"uxui", imagen:"imagen/duoc_apaña.jpg"},
+  {nombre:"Valck Producciones Digitales", categoria:"publicidad", imagen:"imagen/valck_producciones_digitales.jpg"},
+  {nombre:"Nomade Club", categoria:"branding", imagen:"imagen/club_nomade.jpg"},
+  {nombre:"Serigrafía y pedidos personalizados", categoria:"publicidad", imagen:"imagen/serigrafía_y_pedidos_personalizados.jpg"}
 ];
 
 const contenedor = document.querySelector("#projectGrid");
 
 if (contenedor) {
-  contenedor.innerHTML = proyectos.map(([nombre, categoria]) => `
-    <article class="card project" data-cat="${categoria}">
-      <div class="placeholder">${nombre}</div>
+  contenedor.innerHTML = proyectos.map(proyecto => `
+    <article class="card project" data-cat="${proyecto.categoria}">
+      <div class="media">
+        <img src="${proyecto.imagen}" alt="${proyecto.nombre}">
+      </div>
       <div class="copy">
-        <small>${categoria}</small>
-        <h3>${nombre}</h3>
+        <small>${proyecto.categoria}</small>
+        <h3>${proyecto.nombre}</h3>
         <p>Proyecto de diseño gráfico desarrollado para portafolio profesional.</p>
       </div>
     </article>
