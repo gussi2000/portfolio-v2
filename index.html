@@ -1,164 +1,33 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gustavo Villar | Diseñador Gráfico</title>
-  <meta name="description" content="Portafolio de Gustavo Villar Escobar: diseño gráfico, branding, UX/UI, ilustración, publicidad, packaging y motion." />
-  <style>
-:root{--bg:#07070b;--text:#f6f0e8;--muted:#aaa3b8;--pink:#ff0f7b;--cyan:#00e5ff;--acid:#d9ff00;--violet:#7b2cff;--line:rgba(255,255,255,.15)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at 18% 12%,rgba(255,15,123,.26),transparent 28rem),radial-gradient(circle at 82% 15%,rgba(0,229,255,.18),transparent 24rem),radial-gradient(circle at 48% 85%,rgba(123,44,255,.18),transparent 30rem),var(--bg);color:var(--text);overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:999;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px);background-size:100% 4px;mix-blend-mode:screen}a{color:inherit;text-decoration:none}.nav,nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:20px clamp(18px,5vw,64px);background:linear-gradient(to bottom,rgba(7,7,11,.88),transparent);backdrop-filter:blur(14px)}.brand{font-weight:900;letter-spacing:-1px;text-transform:uppercase}.brand span{color:var(--pink)}.navlinks,.nav-links{display:flex;gap:22px;font-size:12px;text-transform:uppercase;letter-spacing:1.4px}.navlinks a:hover,.nav-links a:hover{color:var(--acid)}
-.hero{min-height:100vh;position:relative;display:grid;place-items:center;padding:118px clamp(18px,5vw,64px) 70px;overflow:hidden}.hero-content{position:relative;z-index:2;text-align:center;max-width:1120px}.hero-orb,.hero-art{position:absolute;width:min(600px,85vw);height:min(600px,85vw);border-radius:43% 57% 54% 46%;background:radial-gradient(circle at 35% 28%,var(--acid),transparent 19%),radial-gradient(circle at 68% 35%,var(--cyan),transparent 21%),radial-gradient(circle at 50% 70%,var(--pink),transparent 30%),linear-gradient(135deg,var(--violet),var(--pink));opacity:.65;filter:drop-shadow(0 40px 90px rgba(0,0,0,.65));animation:float 7s ease-in-out infinite alternate}.hero-img{position:absolute;z-index:1;max-width:min(520px,82vw);max-height:76vh;object-fit:contain;filter:drop-shadow(0 38px 65px rgba(0,0,0,.7));opacity:.92;animation:floatImg 8s ease-in-out infinite alternate}.eyebrow{display:inline-block;color:var(--acid);border:1px solid rgba(217,255,0,.35);border-radius:999px;padding:10px 16px;background:rgba(7,7,11,.62);font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px}h1{font-size:clamp(62px,15vw,190px);line-height:.78;letter-spacing:-9px;margin:0;text-transform:uppercase}h1 span{display:block;color:var(--pink);text-shadow:8px 0 var(--cyan)}.role{margin:28px auto 0;width:fit-content;color:var(--bg);background:var(--acid);border-radius:999px;padding:12px 22px;font-weight:900;text-transform:uppercase;letter-spacing:1.4px}.hero p,.hero-copy{max-width:680px;margin:28px auto 0;color:#e8dff0;font-size:clamp(16px,2vw,21px);line-height:1.55}.actions,.hero-actions{margin-top:34px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.btn{border:1px solid var(--line);padding:14px 20px;border-radius:999px;font-weight:900;text-transform:uppercase;letter-spacing:1px;font-size:12px;background:rgba(255,255,255,.06)}.btn.primary{background:var(--pink);border-color:var(--pink);color:white}.btn:hover{background:var(--acid);color:var(--bg);transform:translateY(-2px)}
-.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;overflow:hidden;white-space:nowrap;color:var(--acid);font-weight:900;text-transform:uppercase;letter-spacing:1px}.marquee span{display:inline-block;animation:move 25s linear infinite}section{padding:90px clamp(18px,5vw,64px)}.head,.section-head{display:flex;justify-content:space-between;gap:28px;align-items:end;border-bottom:1px solid var(--line);padding-bottom:24px;margin-bottom:34px}.head h2,.section-head h2{margin:0;font-size:clamp(42px,8vw,100px);line-height:.88;letter-spacing:-6px;text-transform:uppercase}.head p,.section-head p{margin:0;max-width:560px;color:var(--muted);line-height:1.6}.grid,.featured-grid,.project-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}.card{grid-column:span 4;border:1px solid var(--line);border-radius:28px;overflow:hidden;background:rgba(255,255,255,.055);transition:.25s ease}.card:hover{transform:translateY(-8px) rotate(-1deg);border-color:rgba(217,255,0,.7)}.card.wide{grid-column:span 8}.card.small{grid-column:span 4}.project{grid-column:span 4}.visual,.placeholder{min-height:290px;display:grid;place-items:center;text-align:center;padding:24px;color:var(--bg);font-size:clamp(34px,6vw,72px);line-height:.9;font-weight:900;letter-spacing:-4px;text-transform:uppercase;background:radial-gradient(circle at 25% 25%,rgba(217,255,0,.7),transparent 20%),linear-gradient(135deg,var(--pink),var(--cyan))}.card.wide .visual,.card.wide .placeholder{min-height:380px}.media{min-height:290px;background:linear-gradient(135deg,var(--pink),var(--cyan));position:relative;overflow:hidden;cursor:zoom-in}.card.wide .media{min-height:380px}.media img,.media video{width:100%;height:100%;min-height:inherit;object-fit:cover;display:block;transform:scale(1.02)}.copy,.card-copy{padding:24px}.copy small,.card-copy small{color:var(--cyan);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:1.5px}.copy h3,.card-copy h3{margin:12px 0;font-size:clamp(28px,4vw,48px);line-height:.92;letter-spacing:-3px}.copy p,.card-copy p{margin:0;color:var(--muted);line-height:1.55}
-.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}.filters button{border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.06);color:var(--text);padding:10px 14px;cursor:pointer;text-transform:uppercase;letter-spacing:1px;font-size:12px}.filters button.active,.filters button:hover{background:var(--acid);color:var(--bg);border-color:var(--acid)}.hidden{display:none}.personal{background:radial-gradient(circle at 20% 20%,rgba(255,15,123,.14),transparent 22rem),radial-gradient(circle at 90% 80%,rgba(217,255,0,.08),transparent 24rem)}.cv-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:36px}.cv-intro{color:#e8dff0;font-size:18px;line-height:1.7;border-left:4px solid var(--pink);padding-left:18px}.cv-box{border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.055);padding:24px;margin-bottom:16px}.cv-box h3{margin:0 0 12px;color:var(--acid);text-transform:uppercase;letter-spacing:2px;font-size:14px}.cv-box p{margin:0;color:var(--muted);line-height:1.6}.contact{min-height:70vh;display:grid;place-items:center;text-align:center;background:linear-gradient(135deg,rgba(255,15,123,.18),rgba(0,229,255,.12))}.contact h2{margin:0 0 20px;font-size:clamp(54px,12vw,150px);line-height:.78;letter-spacing:-8px;text-transform:uppercase}.contact p{max-width:620px;margin:0 auto 28px;color:#e8dff0;line-height:1.6}.contact-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.contact-links a{background:var(--acid);color:var(--bg);padding:14px 20px;border-radius:999px;font-weight:900;text-transform:uppercase;font-size:12px;letter-spacing:1px}footer{padding:24px;text-align:center;color:var(--muted);font-size:12px;border-top:1px solid var(--line)}
-@keyframes float{from{transform:translateY(-18px) rotate(-4deg) scale(1)}to{transform:translateY(18px) rotate(4deg) scale(1.04)}}@keyframes floatImg{from{transform:translateY(14px) rotate(-2deg)}to{transform:translateY(-14px) rotate(2deg)}}@keyframes move{to{transform:translateX(-50%)}}@media(max-width:900px){.navlinks,.nav-links{display:none}.head,.section-head{display:block}.head p,.section-head p{margin-top:18px}.card,.card.wide,.card.small,.project{grid-column:span 12}.cv-grid{grid-template-columns:1fr}h1{letter-spacing:-5px}.hero-img{opacity:.62}.hero-orb,.hero-art{opacity:.48}.media,.card.wide .media{min-height:260px}}
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gustavo Villar | Diseñador Gráfico</title>
+<style>
+:root{--bg:#07070b;--text:#f6f0e8;--muted:#aaa3b8;--pink:#ff0f7b;--cyan:#00e5ff;--acid:#d9ff00;--violet:#7b2cff;--line:rgba(255,255,255,.15)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at 18% 12%,rgba(255,15,123,.26),transparent 28rem),radial-gradient(circle at 82% 15%,rgba(0,229,255,.18),transparent 24rem),radial-gradient(circle at 48% 85%,rgba(123,44,255,.18),transparent 30rem),var(--bg);color:var(--text);overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:999;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px);background-size:100% 4px;mix-blend-mode:screen}a{color:inherit;text-decoration:none}nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:20px clamp(18px,5vw,64px);background:linear-gradient(to bottom,rgba(7,7,11,.90),transparent);backdrop-filter:blur(14px)}.brand{font-weight:900;letter-spacing:-1px;text-transform:uppercase}.brand span{color:var(--pink)}.navlinks{display:flex;gap:22px;font-size:12px;text-transform:uppercase;letter-spacing:1.4px}.navlinks a:hover{color:var(--acid)}.hero{min-height:100vh;position:relative;display:grid;place-items:center;padding:118px clamp(18px,5vw,64px) 70px;overflow:hidden}.hero-orb{position:absolute;width:min(600px,85vw);height:min(600px,85vw);border-radius:43% 57% 54% 46%;background:radial-gradient(circle at 35% 28%,var(--acid),transparent 19%),radial-gradient(circle at 68% 35%,var(--cyan),transparent 21%),radial-gradient(circle at 50% 70%,var(--pink),transparent 30%),linear-gradient(135deg,var(--violet),var(--pink));opacity:.62;filter:drop-shadow(0 40px 90px rgba(0,0,0,.65));animation:float 7s ease-in-out infinite alternate}.hero-img{position:absolute;z-index:1;max-width:min(520px,82vw);max-height:76vh;object-fit:contain;filter:drop-shadow(0 38px 65px rgba(0,0,0,.7));opacity:.92;animation:floatImg 8s ease-in-out infinite alternate}.hero-content{position:relative;z-index:2;text-align:center;max-width:1120px}.eyebrow{display:inline-block;color:var(--acid);border:1px solid rgba(217,255,0,.35);border-radius:999px;padding:10px 16px;background:rgba(7,7,11,.62);font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px}h1{font-size:clamp(62px,15vw,190px);line-height:.78;letter-spacing:-9px;margin:0;text-transform:uppercase}h1 span{display:block;color:var(--pink);text-shadow:8px 0 var(--cyan)}.role{margin:28px auto 0;width:fit-content;color:var(--bg);background:var(--acid);border-radius:999px;padding:12px 22px;font-weight:900;text-transform:uppercase;letter-spacing:1.4px}.hero p{max-width:680px;margin:28px auto 0;color:#e8dff0;font-size:clamp(16px,2vw,21px);line-height:1.55}.actions{margin-top:34px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.btn{border:1px solid var(--line);padding:14px 20px;border-radius:999px;font-weight:900;text-transform:uppercase;letter-spacing:1px;font-size:12px;background:rgba(255,255,255,.06)}.btn.primary{background:var(--pink);border-color:var(--pink);color:white}.btn:hover{background:var(--acid);color:var(--bg);transform:translateY(-2px)}.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;overflow:hidden;white-space:nowrap;color:var(--acid);font-weight:900;text-transform:uppercase;letter-spacing:1px}.marquee span{display:inline-block;animation:move 26s linear infinite}section{padding:90px clamp(18px,5vw,64px)}.head{display:flex;justify-content:space-between;gap:28px;align-items:end;border-bottom:1px solid var(--line);padding-bottom:24px;margin-bottom:34px}.head h2{margin:0;font-size:clamp(42px,8vw,100px);line-height:.88;letter-spacing:-6px;text-transform:uppercase}.head p{margin:0;max-width:560px;color:var(--muted);line-height:1.6}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}.card{grid-column:span 4;border:1px solid var(--line);border-radius:28px;overflow:hidden;background:rgba(255,255,255,.055);transition:.25s ease}.card:hover{transform:translateY(-8px) rotate(-1deg);border-color:rgba(217,255,0,.7)}.card.wide{grid-column:span 8}.media{min-height:290px;background:linear-gradient(135deg,var(--pink),var(--cyan));position:relative;overflow:hidden;cursor:pointer}.card.wide .media{min-height:380px}.media img,.media video{width:100%;height:100%;min-height:inherit;object-fit:cover;display:block;transform:scale(1.02)}.media:after{content:"Ver galería";position:absolute;left:14px;bottom:14px;background:rgba(7,7,11,.76);border:1px solid var(--line);border-radius:999px;padding:8px 10px;font-size:11px;text-transform:uppercase;letter-spacing:1px}.placeholder{height:100%;min-height:inherit;display:grid;place-items:center;text-align:center;padding:24px;color:var(--bg);font-size:clamp(34px,6vw,72px);line-height:.9;font-weight:900;letter-spacing:-4px;text-transform:uppercase;background:radial-gradient(circle at 25% 25%,rgba(217,255,0,.7),transparent 20%),linear-gradient(135deg,var(--pink),var(--cyan))}.copy{padding:24px}.copy small{color:var(--cyan);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:1.5px}.copy h3{margin:12px 0;font-size:clamp(28px,4vw,48px);line-height:.92;letter-spacing:-3px}.copy p{margin:0;color:var(--muted);line-height:1.55}.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}.filters button{border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.06);color:var(--text);padding:10px 14px;cursor:pointer;text-transform:uppercase;letter-spacing:1px;font-size:12px}.filters button.active,.filters button:hover{background:var(--acid);color:var(--bg);border-color:var(--acid)}.hidden{display:none}.personal{background:radial-gradient(circle at 20% 20%,rgba(255,15,123,.14),transparent 22rem),radial-gradient(circle at 90% 80%,rgba(217,255,0,.08),transparent 24rem)}.video-grid{margin-top:18px}.cv-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:36px}.cv-intro{color:#e8dff0;font-size:18px;line-height:1.7;border-left:4px solid var(--pink);padding-left:18px}.cv-box{border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.055);padding:24px;margin-bottom:16px}.cv-box h3{margin:0 0 12px;color:var(--acid);text-transform:uppercase;letter-spacing:2px;font-size:14px}.cv-box p{margin:0;color:var(--muted);line-height:1.6}.contact{min-height:70vh;display:grid;place-items:center;text-align:center;background:linear-gradient(135deg,rgba(255,15,123,.18),rgba(0,229,255,.12))}.contact h2{margin:0 0 20px;font-size:clamp(54px,12vw,150px);line-height:.78;letter-spacing:-8px;text-transform:uppercase}.contact p{max-width:620px;margin:0 auto 28px;color:#e8dff0;line-height:1.6}.contact-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.contact-links a{background:var(--acid);color:var(--bg);padding:14px 20px;border-radius:999px;font-weight:900;text-transform:uppercase;font-size:12px;letter-spacing:1px}footer{padding:24px;text-align:center;color:var(--muted);font-size:12px;border-top:1px solid var(--line)}.lightbox{position:fixed;inset:0;z-index:1000;background:rgba(3,3,6,.93);backdrop-filter:blur(14px);display:none;place-items:center;padding:28px}.lightbox.open{display:grid}.lightbox img,.lightbox video{max-width:96vw;max-height:78vh;border-radius:18px;box-shadow:0 30px 90px rgba(0,0,0,.65);background:#050509}.close{position:absolute;top:22px;right:22px;border:0;background:var(--acid);color:var(--bg);padding:12px 16px;border-radius:999px;font-weight:900;cursor:pointer}.lightbox-title{position:absolute;left:28px;top:24px;font-weight:900;color:var(--acid);text-transform:uppercase}.lightbox-controls{position:absolute;bottom:24px;display:flex;gap:10px}.lightbox-controls button{border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.08);color:var(--text);padding:10px 14px;cursor:pointer}.lightbox-controls button:hover{background:var(--acid);color:var(--bg)}@keyframes float{from{transform:translateY(-18px) rotate(-4deg) scale(1)}to{transform:translateY(18px) rotate(4deg) scale(1.04)}}@keyframes floatImg{from{transform:translateY(14px) rotate(-2deg)}to{transform:translateY(-14px) rotate(2deg)}}@keyframes move{to{transform:translateX(-50%)}}@media(max-width:900px){.navlinks{display:none}.head{display:block}.head p{margin-top:18px}.card,.card.wide{grid-column:span 12}.cv-grid{grid-template-columns:1fr}h1{letter-spacing:-5px}.hero-img{opacity:.62}.hero-orb{opacity:.48}.media,.card.wide .media{min-height:260px}}
 </style>
 </head>
 <body>
-  <nav class="nav">
-    <a href="#inicio" class="brand">GUSTAVO <span>VILLAR</span></a>
-    <div class="navlinks">
-      <a href="#destacados">Proyectos</a>
-      <a href="#personales">Personales</a>
-      <a href="#curriculum">Curriculum</a>
-      <a href="#contacto">Contacto</a>
-    </div>
-  </nav>
-
-  <header class="hero" id="inicio">
-    <div class="hero-orb"></div>
-    <img class="hero-img" src="assets/img/perfil/gustavo-hero.webp" alt="Retrato gráfico de Gustavo Villar" />
-    <div class="hero-content">
-      <div class="eyebrow">Branding · UX/UI · Ilustración · Motion</div>
-      <h1>Gustavo<span>Villar</span></h1>
-      <div class="role">Diseñador Gráfico</div>
-      <p>Diseño identidades visuales, piezas gráficas y experiencias digitales con color, carácter y una mirada experimental. Mi trabajo busca comunicar con claridad y dejar una impresión visual memorable.</p>
-      <div class="actions">
-        <a href="#destacados" class="btn primary">Explorar proyectos</a>
-        <a href="#curriculum" class="btn">Ver curriculum</a>
-      </div>
-    </div>
-  </header>
-
-  <div class="marquee"><span>Diseño gráfico · Identidad visual · Branding · UX/UI · Ilustración · Motion · Publicidad · Editorial · Packaging ·</span></div>
-
-  <section id="destacados">
-    <div class="head">
-      <h2>Proyectos destacados</h2>
-      <p>Una selección inicial para mostrar variedad: identidad visual, UX/UI, packaging y marca gráfica.</p>
-    </div>
-    <div class="grid featured" id="featuredGrid"></div>
-  </section>
-
-  <section id="proyectos">
-    <div class="head">
-      <h2>Todos los proyectos</h2>
-      <p>Trabajos recuperados del portafolio original más nuevos proyectos, sin duplicados.</p>
-    </div>
-    <div class="filters">
-      <button class="active" data-filter="todos">Todos</button>
-      <button data-filter="branding">Branding</button>
-      <button data-filter="ux">UX/UI</button>
-      <button data-filter="publicidad">Publicidad</button>
-    </div>
-    <div class="grid" id="projectGrid"></div>
-  </section>
-
-  <section class="personal" id="personales">
-    <div class="head">
-      <h2>Proyectos personales</h2>
-      <p>Ilustración, animación, personajes y exploraciones visuales donde aparece mi lado más libre.</p>
-    </div>
-    <div class="grid" id="personalGrid"></div>
-    <div class="grid video-grid" id="videoGrid"></div>
-  </section>
-
-  <section id="curriculum">
-    <div class="head">
-      <h2>Curriculum</h2>
-      <p>Experiencia profesional, formación y áreas de trabajo.</p>
-    </div>
-    <div class="cv-grid">
-      <p class="cv-intro">Diseñador gráfico profesional de Valparaíso, con experiencia en identidad visual, branding, UX/UI, publicidad, imprenta, educación y organización de ferias creativas.</p>
-      <div>
-        <div class="cv-box"><h3>Formación</h3><p>Diseño Gráfico Profesional — Duoc UC Viña del Mar. Especialización en Marketing.</p></div>
-        <div class="cv-box"><h3>Experiencia</h3><p>UX/UI Designer en Arcadius, diseñador en Valck Producciones Digitales y experiencia en Centro de Simulación Gráfica Duoc UC.</p></div>
-        <div class="cv-box"><h3>Actualidad</h3><p>Diseñador gráfico, asesor inmobiliario, profesor de diseño en educación básica y organizador de ferias de arte, emprendimiento y música.</p></div>
-        <div class="cv-box"><h3>Áreas</h3><p>Branding · Identidad visual · UX/UI · Editorial · Publicidad · Packaging · Ilustración · Animación · Marketing · Imprenta.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact" id="contacto">
-    <div>
-      <h2>Hablemos.</h2>
-      <p>Disponible para proyectos gráficos, identidad visual, piezas publicitarias, UX/UI, ilustración y colaboraciones creativas.</p>
-      <div class="contact-links">
-        <a href="mailto:tu-correo@ejemplo.com">Correo</a>
-        <a href="#">Instagram</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">WhatsApp</a>
-      </div>
-    </div>
-  </section>
-
-  <footer>Gustavo Villar Escobar · Diseñador Gráfico · Valparaíso, Chile</footer>
-
-  <div class="lightbox" id="lightbox">
-    <button class="close" id="closeLightbox">Cerrar ✕</button>
-    <div id="lightboxContent"></div>
-  </div>
-
+<nav><a href="#inicio" class="brand">GUSTAVO <span>VILLAR</span></a><div class="navlinks"><a href="#destacados">Proyectos</a><a href="#personales">Personales</a><a href="#curriculum">Curriculum</a><a href="#contacto">Contacto</a></div></nav>
+<header class="hero" id="inicio"><div class="hero-orb"></div><img class="hero-img" src="img/perfil/01.webp" alt="Retrato gráfico de Gustavo Villar" onerror="this.style.display='none'"><div class="hero-content"><div class="eyebrow">Branding · UX/UI · Ilustración · Motion</div><h1>Gustavo<span>Villar</span></h1><div class="role">Diseñador Gráfico</div><p>Diseño identidades visuales, piezas gráficas y experiencias digitales con color, carácter y una mirada experimental. Mi trabajo busca comunicar con claridad y dejar una impresión visual memorable.</p><div class="actions"><a href="#destacados" class="btn primary">Explorar proyectos</a><a href="#curriculum" class="btn">Ver curriculum</a></div></div></header>
+<div class="marquee"><span>Diseño gráfico · Identidad visual · Branding · UX/UI · Ilustración · Motion · Publicidad · Editorial · Packaging · Diseño gráfico · Identidad visual · Branding · UX/UI · Ilustración · Motion · Publicidad · Editorial · Packaging ·</span></div>
+<section id="destacados"><div class="head"><h2>Proyectos destacados</h2><p>Una selección inicial para mostrar variedad: identidad visual, UX/UI, packaging y marca gráfica.</p></div><div class="grid" id="featuredGrid"></div></section>
+<section id="proyectos"><div class="head"><h2>Todos los proyectos</h2><p>Trabajos recuperados del portafolio original más nuevos proyectos, sin duplicados.</p></div><div class="filters"><button class="active" data-filter="todos">Todos</button><button data-filter="branding">Branding</button><button data-filter="ux">UX/UI</button><button data-filter="publicidad">Publicidad</button></div><div class="grid" id="projectGrid"></div></section>
+<section class="personal" id="personales"><div class="head"><h2>Proyectos personales</h2><p>Ilustración, animación, personajes y exploraciones visuales donde aparece mi lado más libre.</p></div><div class="grid" id="personalGrid"></div><div class="grid video-grid" id="videoGrid"></div></section>
+<section id="curriculum"><div class="head"><h2>Curriculum</h2><p>Experiencia profesional, formación y áreas de trabajo.</p></div><div class="cv-grid"><p class="cv-intro">Diseñador gráfico profesional de Valparaíso, con experiencia en identidad visual, branding, UX/UI, publicidad, imprenta, educación y organización de ferias creativas.</p><div><div class="cv-box"><h3>Formación</h3><p>Diseño Gráfico Profesional — Duoc UC Viña del Mar. Especialización en Marketing.</p></div><div class="cv-box"><h3>Experiencia</h3><p>UX/UI Designer en Arcadius, diseñador en Valck Producciones Digitales y experiencia en Centro de Simulación Gráfica Duoc UC.</p></div><div class="cv-box"><h3>Actualidad</h3><p>Diseñador gráfico, asesor inmobiliario, profesor de diseño en educación básica y organizador de ferias de arte, emprendimiento y música.</p></div><div class="cv-box"><h3>Áreas</h3><p>Branding · Identidad visual · UX/UI · Editorial · Publicidad · Packaging · Ilustración · Animación · Marketing · Imprenta.</p></div></div></div></section>
+<section class="contact" id="contacto"><div><h2>Hablemos.</h2><p>Disponible para proyectos gráficos, identidad visual, piezas publicitarias, UX/UI, ilustración y colaboraciones creativas.</p><div class="contact-links"><a href="mailto:tu-correo@ejemplo.com">Correo</a><a href="#">Instagram</a><a href="#">LinkedIn</a><a href="#">WhatsApp</a></div></div></section>
+<footer>Gustavo Villar Escobar · Diseñador Gráfico · Valparaíso, Chile</footer>
+<div class="lightbox" id="lightbox"><button class="close" id="closeLightbox">Cerrar ✕</button><div class="lightbox-title" id="lightboxTitle"></div><div id="lightboxContent"></div><div class="lightbox-controls"><button id="prevImg">Anterior</button><button id="nextImg">Siguiente</button></div></div>
 <script>
-const proyectos = [
-  {nombre:"Aspaut", categoria:"branding", imagen:"imagen/aspaut.jpg"},
-  {nombre:"Arcadius", categoria:"ux", imagen:"imagen/arcadius.jpg"},
-  {nombre:"Pistolita'S", categoria:"branding", imagen:"imagen/pistolitas.png"},
-  {nombre:"Orion Whisky", categoria:"branding", imagen:"imagen/orion_whisky_artesanal.jpg"},
-  {nombre:"Gisella Podología", categoria:"branding", imagen:"imagen/gisella_podología.jpg"},
-  {nombre:"Ventas JCS", categoria:"branding", imagen:"imagen/ventas_jcs.jpg"},
-  {nombre:"Alegre Gastronomía", categoria:"branding", imagen:"imagen/alegre_gastronomía.jpg"},
-  {nombre:"Divino Tormento", categoria:"branding", imagen:"imagen/divino_tormento.jpg"},
-  {nombre:"Hermes Aerolínea", categoria:"branding", imagen:"imagen/hermes_aerolínea.jpg"},
-  {nombre:"Pro Energy", categoria:"branding", imagen:"imagen/pro_energy.jpg"},
-  {nombre:"Duoc Apaña", categoria:"ux", imagen:"imagen/duoc_apaña.jpg"},
-  {nombre:"Valck Producciones Digitales", categoria:"publicidad", imagen:"imagen/valck_producciones_digitales.jpg"},
-  {nombre:"Nomade Club", categoria:"branding", imagen:"imagen/club_nomade.jpg"},
-  {nombre:"Serigrafía y pedidos personalizados", categoria:"publicidad", imagen:"imagen/serigrafía_y_pedidos_personalizados.jpg"}
-];
-
-const contenedor = document.querySelector("#projectGrid");
-
-if (contenedor) {
-  contenedor.innerHTML = proyectos.map(proyecto => `
-    <article class="card project" data-cat="${proyecto.categoria}">
-      <div class="media">
-        <img src="${proyecto.imagen}" alt="${proyecto.nombre}">
-      </div>
-      <div class="copy">
-        <small>${proyecto.categoria}</small>
-        <h3>${proyecto.nombre}</h3>
-        <p>Proyecto de diseño gráfico desarrollado para portafolio profesional.</p>
-      </div>
-    </article>
-  `).join("");
-}
-
-const botones = document.querySelectorAll(".filters button");
-
-botones.forEach(boton => {
-  boton.addEventListener("click", () => {
-    const filtro = boton.dataset.filter;
-
-    botones.forEach(b => b.classList.remove("active"));
-    boton.classList.add("active");
-
-    document.querySelectorAll(".project").forEach(card => {
-      const categoria = card.dataset.cat;
-      card.classList.toggle("hidden", filtro !== "todos" && categoria !== filtro);
-    });
-  });
-});
+const projects=[{title:"Aspaut",cat:"branding",folder:"aspaut",count:8,desc:"Sistema gráfico para centro educacional."},{title:"Arcadius",cat:"ux",folder:"arcadius",count:6,desc:"Interfaz y experiencia digital para videojuego RPG."},{title:"Pistolita'S",cat:"branding",folder:"pistolitas",count:4,desc:"Sistema de marca para pintura y estética automotriz."},{title:"Orion Whisky",cat:"branding",folder:"orion-whisky-artesanal",count:3,desc:"Identidad y packaging para whisky artesanal."},{title:"Gisella Podología",cat:"branding",folder:"gisella-podologia",count:1,desc:"Marca gráfica para salud podológica."},{title:"Ventas JCS",cat:"branding",folder:"ventas-jcs",count:4,desc:"Identidad visual para retail independiente."},{title:"Alegre Gastronomía",cat:"branding",folder:"alegre-gastronomia",count:5,desc:"Identidad y guía turística gastronómica."},{title:"Divino Tormento",cat:"branding",folder:"divino-tormento",count:2,desc:"Identidad para vinos independientes."},{title:"Hermes Aerolínea",cat:"branding",folder:"hermes-aerolinea",count:2,desc:"Marca para aerolínea chilena."},{title:"Pro Energy",cat:"branding",folder:"pro-energy",count:3,desc:"Marca para cadena de gimnasios."},{title:"Duoc Apaña",cat:"ux",folder:"duoc-apana",count:2,desc:"App de apoyo estudiantil."},{title:"Valck Producciones Digitales",cat:"publicidad",folder:"valck",count:3,desc:"Piezas comerciales e impresas para imprenta."},{title:"Nomade Club",cat:"branding",folder:"nomade-club",count:3,desc:"Marca para feria de artes y oficios."},{title:"Etiquetas y marcas de producto",cat:"branding",folder:"etiquetas-y-marcas-de-producto",count:3,desc:"Diseño de marcas y etiquetas para productos."},{title:"Serigrafía y pedidos personalizados",cat:"publicidad",folder:"serigrafia-y-pedidos-personalizados",count:4,desc:"Trabajo gráfico aplicado a textiles y pedidos personalizados."}];
+const personal=[{title:"Ilustración personal",cat:"personal",folder:"personales-ilustracion",count:4,desc:"Retratos, color, textura y diseño tattoo."}];
+const videos=[{title:"Animación: Cara",file:"animación-cara.mp4",desc:"Estudio de movimiento e ilustración animada."},{title:"Astronauta",file:"astronauta.mp4",desc:"Exploración audiovisual personal."},{title:"Piloto: Niña de la Luna",file:"piloto-niña-de-la-luna.mp4",desc:"Piloto animado narrativo."}];
+function imgPath(folder,n){return`img/${folder}/${String(n).padStart(2,"0")}.webp`}
+function cardHTML(p,wide=false){return`<article class="card ${wide?"wide":""}" data-title="${p.title}" data-folder="${p.folder}" data-count="${p.count}" data-type="image" data-cat="${p.cat}"><div class="media"><img src="${imgPath(p.folder,1)}" alt="${p.title}" onerror="this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>${p.title}</div>'"></div><div class="copy"><small>${p.cat}</small><h3>${p.title}</h3><p>${p.desc}</p></div></article>`}
+const featuredFolders=["aspaut","arcadius","pistolitas","orion-whisky-artesanal"];document.querySelector("#featuredGrid").innerHTML=projects.filter(p=>featuredFolders.includes(p.folder)).map((p,i)=>cardHTML(p,i===0||i===3)).join("");document.querySelector("#projectGrid").innerHTML=projects.map(p=>cardHTML(p)).join("");document.querySelector("#personalGrid").innerHTML=personal.map((p,i)=>cardHTML(p,i===0)).join("");document.querySelector("#videoGrid").innerHTML=videos.map(v=>`<article class="card" data-title="${v.title}" data-video="${v.file}" data-type="video"><div class="media"><video src="${v.file}" muted loop playsinline></video></div><div class="copy"><small>animación</small><h3>${v.title}</h3><p>${v.desc}</p></div></article>`).join("");
+document.querySelectorAll(".filters button").forEach(button=>{button.addEventListener("click",()=>{const filter=button.dataset.filter;document.querySelectorAll(".filters button").forEach(b=>b.classList.remove("active"));button.classList.add("active");document.querySelectorAll("#projectGrid .card").forEach(card=>{card.classList.toggle("hidden",!(filter==="todos"||card.dataset.cat===filter))})})});
+let currentGallery=[],currentIndex=0,currentTitle="";const lb=document.querySelector("#lightbox"),content=document.querySelector("#lightboxContent"),titleEl=document.querySelector("#lightboxTitle");function showMedia(){const src=currentGallery[currentIndex];titleEl.textContent=`${currentTitle} · ${currentIndex+1}/${currentGallery.length}`;content.innerHTML=src.endsWith(".mp4")?`<video src="${src}" controls autoplay></video>`:`<img src="${src}" alt="${currentTitle}">`}document.addEventListener("click",e=>{const media=e.target.closest(".media");if(!media)return;const card=media.closest(".card");currentTitle=card.dataset.title||"";if(card.dataset.type==="video"){currentGallery=[card.dataset.video]}else{const folder=card.dataset.folder,count=Number(card.dataset.count||1);currentGallery=Array.from({length:count},(_,i)=>imgPath(folder,i+1))}currentIndex=0;showMedia();lb.classList.add("open");document.body.style.overflow="hidden"});function closeLightbox(){lb.classList.remove("open");content.innerHTML="";document.body.style.overflow=""}document.querySelector("#closeLightbox").addEventListener("click",closeLightbox);lb.addEventListener("click",e=>{if(e.target===lb)closeLightbox()});document.querySelector("#prevImg").addEventListener("click",()=>{currentIndex=(currentIndex-1+currentGallery.length)%currentGallery.length;showMedia()});document.querySelector("#nextImg").addEventListener("click",()=>{currentIndex=(currentIndex+1)%currentGallery.length;showMedia()});document.addEventListener("keydown",e=>{if(!lb.classList.contains("open"))return;if(e.key==="Escape")closeLightbox();if(e.key==="ArrowLeft")document.querySelector("#prevImg").click();if(e.key==="ArrowRight")document.querySelector("#nextImg").click()});
 </script>
 </body>
 </html>
