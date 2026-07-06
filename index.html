@@ -111,5 +111,53 @@
 
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
+  <script>
+const proyectos = [
+  ["Aspaut", "branding"],
+  ["Arcadius", "uxui"],
+  ["Pistolita'S", "branding"],
+  ["Orion Whisky", "branding"],
+  ["Gisella Podología", "branding"],
+  ["Ventas JCS", "branding"],
+  ["Alegre Gastronomía", "branding"],
+  ["Divino Tormento", "branding"],
+  ["Hermes Aerolínea", "branding"],
+  ["Pro Energy", "branding"],
+  ["Duoc Apaña", "uxui"],
+  ["Valck Producciones Digitales", "publicidad"],
+  ["Nomade Club", "branding"]
+];
+
+const contenedor = document.querySelector("#projectGrid");
+
+if (contenedor) {
+  contenedor.innerHTML = proyectos.map(([nombre, categoria]) => `
+    <article class="card project" data-cat="${categoria}">
+      <div class="placeholder">${nombre}</div>
+      <div class="copy">
+        <small>${categoria}</small>
+        <h3>${nombre}</h3>
+        <p>Proyecto de diseño gráfico desarrollado para portafolio profesional.</p>
+      </div>
+    </article>
+  `).join("");
+}
+
+const botones = document.querySelectorAll(".filters button");
+
+botones.forEach(boton => {
+  boton.addEventListener("click", () => {
+    const filtro = boton.dataset.filter;
+
+    botones.forEach(b => b.classList.remove("active"));
+    boton.classList.add("active");
+
+    document.querySelectorAll(".project").forEach(card => {
+      const categoria = card.dataset.cat;
+      card.classList.toggle("hidden", filtro !== "todos" && categoria !== filtro);
+    });
+  });
+});
+</script>
 </body>
 </html>
