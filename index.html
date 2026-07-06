@@ -108,7 +108,26 @@
 <script>
 const projects=[{title:"Aspaut",cat:"branding",folder:"aspaut",count:8,desc:"Sistema gráfico para centro educacional."},{title:"Arcadius",cat:"ux",folder:"arcadius",count:6,desc:"Interfaz y experiencia digital para videojuego RPG."},{title:"Pistolita'S",cat:"branding",folder:"pistolitas",count:4,desc:"Sistema de marca para pintura y estética automotriz."},{title:"Orion Whisky",cat:"branding",folder:"orion-whisky-artesanal",cover:2,count:3,desc:"Identidad y packaging para whisky artesanal."},{title:"Gisella Podología",cat:"branding",folder:"gisella-podologia",count:1,desc:"Marca gráfica para salud podológica."},{title:"Ventas JCS",cat:"branding",folder:"ventas-jcs",count:4,desc:"Identidad visual para retail independiente."},{title:"Alegre Gastronomía",cat:"branding",folder:"alegre-gastronomia",count:5,desc:"Identidad y guía turística gastronómica."},{title:"Divino Tormento",cat:"branding",folder:"divino-tormento",count:2,desc:"Identidad para vinos independientes."},{title:"Hermes Aerolínea",cat:"branding",folder:"hermes-aerolinea",count:2,desc:"Marca para aerolínea chilena."},{title:"Pro Energy",cat:"branding",folder:"pro-energy",count:3,desc:"Marca para cadena de gimnasios."},{title:"Duoc Apaña",cat:"ux",folder:"duoc-apana",count:2,desc:"App de apoyo estudiantil."},{title:"Valck Producciones Digitales",cat:"publicidad",folder:"valck",count:3,desc:"Piezas comerciales e impresas para imprenta."},{title:"Nomade Club",cat:"branding",folder:"nomade-club",count:3,desc:"Marca para feria de artes y oficios."},{title:"Etiquetas y marcas de producto",cat:"branding",folder:"etiquetas-y-marcas-de-producto",count:3,desc:"Diseño de marcas y etiquetas para productos."},{title:"Serigrafía y pedidos personalizados",cat:"publicidad",folder:"serigrafia-y-pedidos-personalizados",count:4,desc:"Trabajo gráfico aplicado a textiles y pedidos personalizados."}];
 const personal=[{title:"Ilustración personal",cat:"personal",folder:"personales-ilustracion",count:4,desc:"Retratos, color, textura y diseño tattoo."}];
-const videos=[{title:"Animación: Cara",file:"animación-cara.mp4",desc:"Estudio de movimiento e ilustración animada."},{title:"Astronauta",file:"astronauta.mp4",desc:"Exploración audiovisual personal."},{title:"Piloto: Niña de la Luna",file:"piloto-niña-de-la-luna.mp4",desc:"Piloto animado narrativo."}];
+const videos=[
+{
+title:"Animación: Cara",
+file:"img/videos/cara1.mp4",
+poster:"img/videos/animacion-cara.webp",
+desc:"Estudio de movimiento e ilustración animada."
+},
+{
+title:"Astronauta",
+file:"img/videos/FINAL ASTRONAUTA SE SUPONE JEJE.mp4",
+poster:"img/videos/astronauta.webp",
+desc:"Exploración audiovisual personal."
+},
+{
+title:"Piloto: Niña de la Luna",
+file:"img/videos/piloto la niña de la luna.mp4",
+poster:"img/videos/piloto-nina-de-la-luna.webp",
+desc:"Piloto animado narrativo."
+}
+];
 function imgPath(folder,n){return`img/${folder}/${String(n).padStart(2,"0")}.webp`}
 function cardHTML(p,wide=false){return`<article class="card ${wide?"wide":""}" data-title="${p.title}" data-folder="${p.folder}" data-count="${p.count}" data-type="image" data-cat="${p.cat}"><div class="media"><img src="${imgPath(p.folder,p.cover || 1)}" alt="${p.title}" onerror="this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>${p.title}</div>'"></div><div class="copy"><small>${p.cat}</small><h3>${p.title}</h3><p>${p.desc}</p></div></article>`}
 const featuredFolders=["aspaut","arcadius","pistolitas","orion-gisella-podologia"];document.querySelector("#featuredGrid").innerHTML=projects.filter(p=>featuredFolders.includes(p.folder)).map((p,i)=>cardHTML(p,i===0||i===3)).join("");document.querySelector("#projectGrid").innerHTML=projects.map(p=>cardHTML(p)).join("");document.querySelector("#personalGrid").innerHTML=personal.map((p,i)=>cardHTML(p,i===0)).join("");document.querySelector("#videoGrid").innerHTML=videos.map(v=>`<article class="card" data-title="${v.title}" data-video="${v.file}" data-type="video"><div class="media"><video src="${v.file}" muted loop playsinline></video></div><div class="copy"><small>animación</small><h3>${v.title}</h3><p>${v.desc}</p></div></article>`).join("");
