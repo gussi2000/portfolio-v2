@@ -22,6 +22,45 @@
   </div>
 
   <div class="cv-grid">
+    <div class="cv-box">
+      <h3>✦ Gustavo Villar</h3>
+      <p class="cv-intro">
+        Diseñador Gráfico profesional de Valparaíso, especializado en identidad visual, branding, UX/UI, publicidad, packaging e ilustración.
+      </p>
+    </div>
+
+    <div>
+      <div class="cv-box">
+        <h3>▣ Experiencia en diseño</h3>
+        <p><strong>Arcadius</strong> — UX/UI Designer. Interfaces, experiencia de usuario y visualidad para videojuegos.</p>
+        <p><strong>Valck Producciones Digitales</strong> — Diseñador gráfico. Publicidad, gigantografías, pendones, palomas y producción gráfica.</p>
+        <p><strong>Centro de Simulación Gráfica Duoc UC</strong> — Proyectos gráficos, producción digital y archivos para impresión.</p>
+        <p><strong>Docencia en diseño</strong> — Profesor de diseño gráfico y artes visuales en educación básica.</p>
+      </div>
+
+      <div class="cv-box">
+        <h3>✦ Formación</h3>
+        <p>Diseño Gráfico Profesional — Duoc UC Viña del Mar. Especialización en Marketing.</p>
+      </div>
+
+      <div class="cv-box">
+        <h3>◈ Especialidades</h3>
+        <p>Branding · Identidad visual · UX/UI · Packaging · Diseño editorial · Publicidad · Producción gráfica · Ilustración · Motion Graphics.</p>
+      </div>
+
+      <div class="cv-box">
+        <h3>▧ Software</h3>
+        <p>Illustrator · Photoshop · InDesign · Premiere Pro · After Effects · Animate · Figma.</p>
+      </div>
+    </div>
+  </div>
+</section>
+  <div class="head">
+    <h2>Perfil profesional</h2>
+    <p>Trayectoria enfocada en diseño gráfico, comunicación visual, UX/UI, impresión, docencia creativa e identidad de marca.</p>
+  </div>
+
+  <div class="cv-grid">
     <p class="cv-intro">
       Diseñador Gráfico profesional de Valparaíso, especializado en identidad visual, branding, UX/UI, publicidad, packaging e ilustración. Me enfoco en crear soluciones visuales funcionales, memorables y con una fuerte personalidad gráfica.
     </p>
@@ -52,7 +91,18 @@
     </div>
   </div>
 </section>
-<section class="contact" id="contacto"><div><h2>Hablemos.</h2><p>Disponible para proyectos gráficos, identidad visual, piezas publicitarias, UX/UI, ilustración y colaboraciones creativas.</p><div class="contact-links"><a href="mailto:tu-correo@ejemplo.com">Correo</a><a href="#">Instagram</a><a href="#">LinkedIn</a><a href="#">WhatsApp</a></div></div></section>
+<section class="contact" id="contacto">
+  <div>
+    <h2>Hablemos.</h2>
+    <p>Disponible para proyectos gráficos, identidad visual, piezas publicitarias, UX/UI, ilustración y colaboraciones creativas.</p>
+
+    <div class="contact-links">
+      <a href="mailto:gustavart43@gmail.com">Correo · gustavart43@gmail.com</a>
+      <a href="https://www.instagram.com/chavin_gtv" target="_blank">Instagram · @chavin_gtv</a>
+      <a href="https://wa.me/56959970113" target="_blank">WhatsApp · +56 9 5997 0113</a>
+    </div>
+  </div>
+</section>
 <footer>Gustavo Villar Escobar · Diseñador Gráfico · Valparaíso, Chile</footer>
 <div class="lightbox" id="lightbox"><button class="close" id="closeLightbox">Cerrar ✕</button><div class="lightbox-title" id="lightboxTitle"></div><div id="lightboxContent"></div><div class="lightbox-controls"><button id="prevImg">Anterior</button><button id="nextImg">Siguiente</button></div></div>
 <script>
@@ -61,7 +111,7 @@ const personal=[{title:"Ilustración personal",cat:"personal",folder:"personales
 const videos=[{title:"Animación: Cara",file:"animación-cara.mp4",desc:"Estudio de movimiento e ilustración animada."},{title:"Astronauta",file:"astronauta.mp4",desc:"Exploración audiovisual personal."},{title:"Piloto: Niña de la Luna",file:"piloto-niña-de-la-luna.mp4",desc:"Piloto animado narrativo."}];
 function imgPath(folder,n){return`img/${folder}/${String(n).padStart(2,"0")}.webp`}
 function cardHTML(p,wide=false){return`<article class="card ${wide?"wide":""}" data-title="${p.title}" data-folder="${p.folder}" data-count="${p.count}" data-type="image" data-cat="${p.cat}"><div class="media"><img src="${imgPath(p.folder,1)}" alt="${p.title}" onerror="this.parentElement.innerHTML='<div class=&quot;placeholder&quot;>${p.title}</div>'"></div><div class="copy"><small>${p.cat}</small><h3>${p.title}</h3><p>${p.desc}</p></div></article>`}
-const featuredFolders=["aspaut","arcadius","pistolitas","orion-whisky-artesanal"];document.querySelector("#featuredGrid").innerHTML=projects.filter(p=>featuredFolders.includes(p.folder)).map((p,i)=>cardHTML(p,i===0||i===3)).join("");document.querySelector("#projectGrid").innerHTML=projects.map(p=>cardHTML(p)).join("");document.querySelector("#personalGrid").innerHTML=personal.map((p,i)=>cardHTML(p,i===0)).join("");document.querySelector("#videoGrid").innerHTML=videos.map(v=>`<article class="card" data-title="${v.title}" data-video="${v.file}" data-type="video"><div class="media"><video src="${v.file}" muted loop playsinline></video></div><div class="copy"><small>animación</small><h3>${v.title}</h3><p>${v.desc}</p></div></article>`).join("");
+const featuredFolders=["aspaut","arcadius","pistolitas","orion-gisella-podologia"];document.querySelector("#featuredGrid").innerHTML=projects.filter(p=>featuredFolders.includes(p.folder)).map((p,i)=>cardHTML(p,i===0||i===3)).join("");document.querySelector("#projectGrid").innerHTML=projects.map(p=>cardHTML(p)).join("");document.querySelector("#personalGrid").innerHTML=personal.map((p,i)=>cardHTML(p,i===0)).join("");document.querySelector("#videoGrid").innerHTML=videos.map(v=>`<article class="card" data-title="${v.title}" data-video="${v.file}" data-type="video"><div class="media"><video src="${v.file}" muted loop playsinline></video></div><div class="copy"><small>animación</small><h3>${v.title}</h3><p>${v.desc}</p></div></article>`).join("");
 document.querySelectorAll(".filters button").forEach(button=>{button.addEventListener("click",()=>{const filter=button.dataset.filter;document.querySelectorAll(".filters button").forEach(b=>b.classList.remove("active"));button.classList.add("active");document.querySelectorAll("#projectGrid .card").forEach(card=>{card.classList.toggle("hidden",!(filter==="todos"||card.dataset.cat===filter))})})});
 let currentGallery=[],currentIndex=0,currentTitle="";const lb=document.querySelector("#lightbox"),content=document.querySelector("#lightboxContent"),titleEl=document.querySelector("#lightboxTitle");function showMedia(){const src=currentGallery[currentIndex];titleEl.textContent=`${currentTitle} · ${currentIndex+1}/${currentGallery.length}`;content.innerHTML=src.endsWith(".mp4")?`<video src="${src}" controls autoplay></video>`:`<img src="${src}" alt="${currentTitle}">`}document.addEventListener("click",e=>{const media=e.target.closest(".media");if(!media)return;const card=media.closest(".card");currentTitle=card.dataset.title||"";if(card.dataset.type==="video"){currentGallery=[card.dataset.video]}else{const folder=card.dataset.folder,count=Number(card.dataset.count||1);currentGallery=Array.from({length:count},(_,i)=>imgPath(folder,i+1))}currentIndex=0;showMedia();lb.classList.add("open");document.body.style.overflow="hidden"});function closeLightbox(){lb.classList.remove("open");content.innerHTML="";document.body.style.overflow=""}document.querySelector("#closeLightbox").addEventListener("click",closeLightbox);lb.addEventListener("click",e=>{if(e.target===lb)closeLightbox()});document.querySelector("#prevImg").addEventListener("click",()=>{currentIndex=(currentIndex-1+currentGallery.length)%currentGallery.length;showMedia()});document.querySelector("#nextImg").addEventListener("click",()=>{currentIndex=(currentIndex+1)%currentGallery.length;showMedia()});document.addEventListener("keydown",e=>{if(!lb.classList.contains("open"))return;if(e.key==="Escape")closeLightbox();if(e.key==="ArrowLeft")document.querySelector("#prevImg").click();if(e.key==="ArrowRight")document.querySelector("#nextImg").click()});
 </script>
